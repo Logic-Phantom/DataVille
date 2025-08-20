@@ -115,8 +115,9 @@ export default function GlobalStockModal() {
           </button>
           <button
             onClick={() => {
-              // 추후 차트 보기 기능 추가 가능
-              console.log('Chart view for', stockInfo.symbol)
+              // 네이버 금융 차트 페이지로 이동
+              const naverFinanceUrl = `https://finance.naver.com/item/main.naver?code=${stockInfo.symbol}`
+              window.open(naverFinanceUrl, '_blank')
             }}
             className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl transition-colors"
           >

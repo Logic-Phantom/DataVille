@@ -45,8 +45,10 @@ export const formatMarketCap = (marketCap: number): string => {
     return `${(marketCap / 100000000000).toFixed(1)}천억원`
   } else if (marketCap >= 100000000) {
     return `${(marketCap / 100000000).toFixed(0)}억원`
+  } else if (marketCap >= 10000000) {
+    return `${(marketCap / 100000000).toFixed(1)}억원`
   }
-  return `${marketCap.toLocaleString()}원`
+  return `${(marketCap / 100000000).toFixed(2)}억원`
 }
 
 // 거래량 기반 강도 계산

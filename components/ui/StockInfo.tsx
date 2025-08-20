@@ -2,7 +2,7 @@
 
 import { useStockStore } from '@/stores/stockStore'
 import { ALL_MAJOR_STOCKS } from '@/shared/constants/stocks'
-import { formatPrice, formatChangeRate } from '@/utils/stockData'
+import { formatPrice, formatChangeRate, formatMarketCap } from '@/utils/stockData'
 
 export default function StockInfo() {
   const { stockData, selectedStock, selectStock, marketVolatility } = useStockStore()
@@ -74,7 +74,7 @@ export default function StockInfo() {
             <div className="flex justify-between">
               <span className="text-gray-400">시가총액:</span>
               <span className="text-white">
-                {selectedStockData.marketCap.toLocaleString()}원
+                {formatMarketCap(selectedStockData.marketCap)}
               </span>
             </div>
           </div>
