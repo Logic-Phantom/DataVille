@@ -1,6 +1,8 @@
-# UTF-8 인코딩 설정
+# UTF-8 BOM 인코딩으로 저장된 파일
+# PowerShell에서 한글 출력을 위한 설정
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $OutputEncoding = [System.Text.Encoding]::UTF8
+chcp 65001 | Out-Null
 
 Write-Host ""
 Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Cyan

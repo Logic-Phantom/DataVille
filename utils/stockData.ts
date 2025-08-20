@@ -37,6 +37,18 @@ export const formatChangeRate = (changeRate: number): string => {
   return `${sign}${changeRate.toFixed(2)}%`
 }
 
+// 시가총액 포맷팅 (x조원 형태)
+export const formatMarketCap = (marketCap: number): string => {
+  if (marketCap >= 1000000000000) {
+    return `${(marketCap / 1000000000000).toFixed(1)}조원`
+  } else if (marketCap >= 100000000000) {
+    return `${(marketCap / 100000000000).toFixed(1)}천억원`
+  } else if (marketCap >= 100000000) {
+    return `${(marketCap / 100000000).toFixed(0)}억원`
+  }
+  return `${marketCap.toLocaleString()}원`
+}
+
 // 거래량 기반 강도 계산
 export const calculateIntensity = (volume: number): number => {
   // 1억주 거래량을 기준으로 정규화
