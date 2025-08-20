@@ -1,0 +1,38 @@
+{
+  "name": "live-data-city",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "backend": "cd backend && npm run dev",
+    "dev:all": "concurrently \"npm run dev\" \"npm run backend\""
+  },
+  "dependencies": {
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "@react-three/fiber": "^8.15.12",
+    "@react-three/drei": "^9.88.13",
+    "three": "^0.160.0",
+    "zustand": "^4.4.7",
+    "socket.io-client": "^4.7.4",
+    "next-pwa": "^5.6.0",
+    "framer-motion": "^10.16.16"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/three": "^0.160.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "concurrently": "^8.2.2"
+  }
+}

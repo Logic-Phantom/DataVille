@@ -1,0 +1,62 @@
+{
+  "name": "Live Data City - 실시간 주식 3D 시각화",
+  "short_name": "DataCity",
+  "description": "실시간 국내 주식 데이터를 3D 가상 도시로 시각화하여 주식 시장의 동향을 직관적으로 표현하는 웹 애플리케이션",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#00ff88",
+  "orientation": "landscape-primary",
+  "categories": ["finance", "productivity", "business"],
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "/icon-base.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Live Data City 메인 화면"
+    },
+    {
+      "src": "/screenshots/mobile-1.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "모바일 3D 도시 뷰"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "KOSPI 보기",
+      "short_name": "KOSPI",
+      "description": "KOSPI 종목들만 표시",
+      "url": "/?view=kospi",
+      "icons": [
+        {
+          "src": "/icons/kospi-shortcut.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "KOSDAQ 보기",
+      "short_name": "KOSDAQ",
+      "description": "KOSDAQ 종목들만 표시",
+      "url": "/?view=kosdaq",
+      "icons": [
+        {
+          "src": "/icons/kosdaq-shortcut.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
